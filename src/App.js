@@ -1,10 +1,10 @@
 import React from "react";
-import PriceSliderComponent from "./components/PriceSliderComponent";
+import { PriceSlider } from "./components/PriceSlider";
 
 export const App = () => {
   return (
     <div>
-      <PriceSliderComponent />
+      <PriceSlider />
     </div>
   );
 };

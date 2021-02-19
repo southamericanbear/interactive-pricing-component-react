@@ -1,0 +1,19 @@
+@import "./switch.css";
+@import "./priceComponent.css";
+@import "./range.css";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+body,
+html {
+  font-family: "Manrope";
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  border: solid 2px purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

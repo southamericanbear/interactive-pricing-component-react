@@ -1,0 +1,53 @@
+@import "./variables.css";
+
+.switch {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  transition: 0.5s;
+  border: solid 0.2px red;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  bottom: 14px;
+  top: 2px;
+  background: var(--strongCyan);
+  transition: 0.5s;
+}
+
+.switch input {
+  display: none;
+}
+
+input:checked + .slider {
+  background: linear-gradient(0.25turn, #378fe6, #3eda82);
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+  background: white;
+}
+
+.slider.round {
+  border-radius: 35px;
+}
+
+.slider.round:before {
+  width: 40%;
+  height: 80%;
+  border-radius: 100px;
+}
