@@ -15,17 +15,17 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: white;
+  background: var(--lightGrayishToggleBG);
   transition: 0.5s;
-  border: solid 0.2px red;
 }
 
 .slider:before {
   position: absolute;
   content: "";
   bottom: 14px;
+  left: 1px;
   top: 2px;
-  background: var(--strongCyan);
+  background: white;
   transition: 0.5s;
 }
 
@@ -34,7 +34,7 @@
 }
 
 input:checked + .slider {
-  background: linear-gradient(0.25turn, #378fe6, #3eda82);
+  background: var(--strongCyan);
 }
 
 input:checked + .slider:before {

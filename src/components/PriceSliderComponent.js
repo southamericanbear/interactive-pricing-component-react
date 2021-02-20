@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import check from "../images/icon-check.svg";
 
 export default function PriceSliderComponent() {
   const [value, setValue] = useState(0);
@@ -63,9 +64,14 @@ export default function PriceSliderComponent() {
           </span>
         </div>
         <div className="switch-container">
-          <span>Monthly Billing</span>
+          <span className="monthly">Monthly Billing</span>
 
-          <label className="switch">
+          <label
+            className="switch"
+            style={{
+              margin: "10px 15px",
+            }}
+          >
             <input
               type="checkbox"
               name="discount"
@@ -75,17 +81,32 @@ export default function PriceSliderComponent() {
             />
             <span className="slider round"></span>
           </label>
-          <span>Yearly Billing</span>
-          <span>25% discount</span>
+          <div className="year">
+            <span className="yearly">Yearly Billing</span>
+            <span className="percentage">-25% </span>
+          </div>
         </div>
       </div>
+      <hr
+        style={{
+          width: "100%",
+          background: "hsl(223, 50%, 87%)",
+          border: "0",
+          height: "1px",
+          marginTop: "30px",
+        }}
+      />
       <div className="details">
         <div className="left">
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
-          </ul>
+          <span>
+            <img src={check} alt="" /> Unlimited websites
+          </span>
+          <span>
+            <img src={check} alt="" /> 100% data ownership
+          </span>
+          <span>
+            <img src={check} alt="" /> Email reports
+          </span>
         </div>
         <div className="right">
           <button>Start my trial</button>

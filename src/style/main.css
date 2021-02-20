@@ -2,18 +2,60 @@
 @import "./priceComponent.css";
 @import "./range.css";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+@import "./variables.css";
 
 body,
 html {
   font-family: "Manrope";
   margin: 0;
   overflow-x: hidden;
+  background: url("../images/bg-pattern.svg") no-repeat;
 }
 
 .container {
-  border: solid 2px purple;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.title {
+  background: url("../images/pattern-circles.svg") center no-repeat;
+  height: 90px;
+  margin: 50px auto 35px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.title h1,
+h5 {
+  margin: 0px;
+}
+
+.title h1 {
+  color: var(--darkDesaturatedBlue);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.title h5 {
+  color: var(--grayishBlue);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (min-width: 650px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+  .title div {
+    display: flex;
+    justify-content: center;
+  }
+  .title div h5 {
+    font-size: 1rem;
+    margin-left: 4px;
+  }
 }

@@ -1,15 +1,24 @@
 .price-component {
-  border: solid red 2px;
+  background: var(--white);
   width: 90%;
+  height: 500px;
+  border-radius: 10px;
   display: flex;
+  padding-top: 20px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  box-shadow: 1px 5px 10px rgba(167, 167, 167, 0.712);
+  margin-bottom: 50px;
+}
+
+.slider-and-switch {
+  width: 100%;
 }
 
 .plan {
   color: var(--grayishBlue);
-  font-size: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 
@@ -30,6 +39,72 @@
   margin-left: 5px;
 }
 
+.switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.monthly,
+.yearly,
+.percentage {
+  color: var(--grayishBlue);
+}
+
+.yearly {
+  margin-right: 5px;
+}
+
+.percentage {
+  background: var(--lightGrayishRed);
+  border-radius: 25px;
+  color: var(--lightRed);
+  padding: 5px;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.details {
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.left span {
+  margin: 5px;
+}
+
+.left span img {
+  margin-right: 10px;
+}
+
+.right button {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  background: var(--darkDesaturatedBlue);
+  color: var(--lightGrayishToggleBG);
+  font-size: 0.7rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background: hsl(227, 27%, 40%);
+}
+
 @media (max-width: 550px) {
   .price {
     display: none;
@@ -39,6 +114,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 190px;
+    margin-bottom: 25px;
   }
   .package-and-price,
   .range,
@@ -47,12 +124,24 @@
   }
 }
 @media (min-width: 550px) {
+  .price-component {
+    width: 50%;
+  }
   .price-mobile {
     display: none;
   }
   .slider-and-switch {
-    border: solid 1px pink;
     width: 40%;
     padding: 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .monthly,
+  .yearly {
+    font-size: 0.8rem;
+  }
+  .percentage {
+    font-size: 0.7rem;
   }
 }

@@ -3,7 +3,7 @@
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="range"] {
     -webkit-appearance: none;
-    width: 100%;
+    width: 80%;
     background: transparent;
   }
 
