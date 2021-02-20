@@ -51,3 +51,7 @@ input:checked + .slider:before {
   height: 80%;
   border-radius: 100px;
 }
+
+.switch {
+  margin: 10px 15px;
+}

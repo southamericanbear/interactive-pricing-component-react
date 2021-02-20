@@ -46,7 +46,10 @@ export default function PriceSliderComponent() {
               {" "}
               ${finalPrice}.00 <span className="month">/month</span>
             </span>
-            <span className="plan"> {plan} PAGEVIEWS </span>
+            <span className="plan">
+              {" "}
+              {plan} <span> PAGEVIEWS </span>
+            </span>
           </div>
           <input
             type="range"
@@ -66,12 +69,7 @@ export default function PriceSliderComponent() {
         <div className="switch-container">
           <span className="monthly">Monthly Billing</span>
 
-          <label
-            className="switch"
-            style={{
-              margin: "10px 15px",
-            }}
-          >
+          <label className="switch">
             <input
               type="checkbox"
               name="discount"
@@ -87,15 +85,7 @@ export default function PriceSliderComponent() {
           </div>
         </div>
       </div>
-      <hr
-        style={{
-          width: "100%",
-          background: "hsl(223, 50%, 87%)",
-          border: "0",
-          height: "1px",
-          marginTop: "30px",
-        }}
-      />
+      <hr />
       <div className="details">
         <div className="left">
           <span>
